@@ -36,6 +36,14 @@ const FAQ: React.FC = () => (
           in the YYYY-MM-DD format and will automatically filter out any invalid dates.
         </AccordionContent>
       </AccordionItem>
+
+      <AccordionItem value="contact">
+        <AccordionTrigger className="text-xs">I have a question or found a bug. How can I get help?</AccordionTrigger>
+        <AccordionContent className="text-xs">
+          If you have any questions or encounter any issues, please feel free to contact me at thorge.lindner@gmail.com. 
+          I'll be happy to help!
+        </AccordionContent>
+      </AccordionItem>
     </Accordion>
   </section>
 );
