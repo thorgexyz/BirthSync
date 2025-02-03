@@ -17,7 +17,7 @@ const App: React.FC = () => {
             Convert your Google Contacts birthdays into a calendar you can import anywhere
           </p>
           <p className="text-sm text-gray-600 mt-2">
-            Due to recent regulatory changes, Google Calendar no longer displays contact birthdays in some regions.
+            Due to recent regulatory changes, <a href="https://support.google.com/calendar/thread/300260220?hl=en&msgid=300357149" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Calendar no longer displays contact birthdays in some regions</a>.
             BirthSync helps you keep tracking birthdays by converting them to regular calendar events.
           </p>
         </header>
