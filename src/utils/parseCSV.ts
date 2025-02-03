@@ -13,11 +13,29 @@ export function parseContactsCSV(file: File): Promise<Contact[]> {
       complete: (results: ParseResult<Record<string, string>>) => {
         try {
           const contacts: Contact[] = results.data
-            .map((row) => ({
-              name: row['Name'] || '',
-              birthday: row['Birthday'] || '',
-            }))
-            .filter((contact: Contact) => isValidDate(contact.birthday));
+            .map((row) => {
+              // Try different name field combinations
+              const name = [
+                // Organization name
+                row['Organization Name'] || '',
+                // Full name
+                row['First Name'] && row['Last Name']
+                  ? `${row['First Name']} ${row['Last Name']}`
+                  : '',
+                // Just first name
+                row['First Name'] || '',
+                // Just last name
+                row['Last Name'] || '',
+              ].find(n => n.length > 0) || ''; // Take first non-empty name
+
+              return {
+                name,
+                birthday: row['Birthday'] || '',
+              };
+            })
+            .filter((contact: Contact) => 
+              contact.name.length > 0 && isValidDate(contact.birthday)
+            );
           resolve(contacts);
         } catch (error: unknown) {
           reject(error);

@@ -1,33 +1,41 @@
 import React from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion"
 
 const FAQ: React.FC = () => (
-  <section className="mt-8 p-4 bg-gray-50 rounded">
-    <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-    <div className="space-y-4">
-      <div>
-        <h3 className="font-medium text-gray-900">Is my data secure?</h3>
-        <p className="mt-1 text-gray-600">
+  <section className="mt-8">
+    <h2 className="text-base font-semibold mb-4 text-white">Frequently Asked Questions</h2>
+    <Accordion type="multiple">
+      <AccordionItem value="security">
+        <AccordionTrigger className="text-xs">Is my data secure?</AccordionTrigger>
+        <AccordionContent className="text-xs">
           Yes, absolutely! All processing occurs directly in your browser. 
           Your contact data is never sent to any server or stored anywhere.
-        </p>
-      </div>
-      <div>
-        <h3 className="font-medium text-gray-900">How does it work?</h3>
-        <p className="mt-1 text-gray-600">
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="how-it-works">
+        <AccordionTrigger className="text-xs">How does it work?</AccordionTrigger>
+        <AccordionContent className="text-xs">
           The app reads your Google Contacts CSV file locally, extracts birthday information,
           and generates a standard ICS calendar file that you can import into any calendar application
           (Google Calendar, Apple Calendar, Outlook, etc.).
-        </p>
-      </div>
-      <div>
-        <h3 className="font-medium text-gray-900">What format should my CSV file be in?</h3>
-        <p className="mt-1 text-gray-600">
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem value="csv-format">
+        <AccordionTrigger className="text-xs">What format should my CSV file be in?</AccordionTrigger>
+        <AccordionContent className="text-xs">
           Use the CSV file exported directly from Google Contacts. The app expects birthdays
           in the YYYY-MM-DD format and will automatically filter out any invalid dates.
-        </p>
-      </div>
-    </div>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   </section>
 );
 
-export default FAQ; 
+export default FAQ;
