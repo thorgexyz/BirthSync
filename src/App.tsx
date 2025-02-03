@@ -23,10 +23,21 @@ const App: React.FC = () => {
         </header>
 
         <main className="w-full">
-          <FileUpload onFileParsed={setContacts} />
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-white mb-4">Step 1: Export your contacts</h2>
+            <p className="text-gray-300 mb-2">
+              Visit <a href="https://contacts.google.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Google Contacts</a> and export your contacts by selecting "Google CSV" from the export options:
+            </p>
+            <img src="/google-contacts-export-1.png" alt="Google Contacts export instructions" className="rounded-lg border border-gray-700 mb-6 w-2/3" />
+          </div>
+
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-white mb-4">Step 2: Convert your birthdays</h2>
+            <FileUpload onFileParsed={setContacts} />
+          </div>
 
           {contacts.length > 0 && (
-            <div className="mt-6">
+            <div className="mt-6 mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold text-white">
                   Found {contacts.length} birthdays
@@ -36,6 +47,14 @@ const App: React.FC = () => {
               <BirthdayTable contacts={contacts} />
             </div>
           )}
+
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold text-white mb-4">Step 3: Import to Google Calendar</h2>
+            <p className="text-gray-300 mb-2">
+              Visit <a href="https://calendar.google.com/calendar/u/4/r/settings/export" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Google Calendar Import Settings</a> and import the downloaded ICS file:
+            </p>
+            <img src="/import-google-event-1.png" alt="Google Calendar import instructions" className="rounded-lg border border-gray-700 mb-6 w-2/3" />
+          </div>
 
           <FAQ />
         </main>
