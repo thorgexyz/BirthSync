@@ -14,11 +14,14 @@ const App: React.FC = () => {
         <header className="text-center mb-8 w-full">
           <h1 className="text-3xl font-bold text-black mb-2">BirthSync</h1>
           <p className="text-gray-700">
-            Convert your Google Contacts birthdays into a calendar you can import anywhere
+            Convert your Google Contacts birthdays into a calendar you can import anywhere - 100% free and secure
           </p>
           <p className="text-sm text-gray-600 mt-2">
             Due to recent regulatory changes, <a href="https://support.google.com/calendar/thread/300260220?hl=en&msgid=300357149" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Calendar no longer displays contact birthdays in some regions</a>.
             BirthSync helps you keep tracking birthdays by converting them to regular calendar events.
+          </p>
+          <p className="text-sm text-gray-600 mt-2">
+            As an open-source tool (<a href="https://github.com/thorgexyz/BirthSync" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">view on GitHub</a>), all processing happens instantly in your browser - your data never leaves your device.
           </p>
         </header>
 

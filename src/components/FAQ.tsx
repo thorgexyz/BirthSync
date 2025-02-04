@@ -15,8 +15,10 @@ const FAQ: React.FC = () => (
         <AccordionContent className="text-xs">
           Yes, absolutely! All processing occurs directly in your browser. 
           Your contact data is never sent to any server or stored anywhere.
-          While we do collect basic analytics to measure product usage, this never includes
-          any of your contact information - the CSV file and its contents remain entirely local to your browser.
+          The app is completely open source and you can verify this yourself by checking the code at{' '}
+          <a href="https://github.com/thorgexyz/BirthSync" className="underline" target="_blank" rel="noopener noreferrer">
+            github.com/thorgexyz/BirthSync
+          </a>.
         </AccordionContent>
       </AccordionItem>
 
