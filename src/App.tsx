@@ -31,7 +31,7 @@ const App: React.FC = () => {
             <p className="text-gray-700 mb-2">
               Visit <a href="https://contacts.google.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Contacts</a> and export your contacts by selecting "Google CSV" from the export options:
             </p>
-            <img src="/google-contacts-export-1.png" alt="Google Contacts export instructions" className="rounded-lg border border-gray-300 mb-6 w-2/3" />
+            <img src="/google-contacts-export-1.png" alt="Google Contacts export instructions" className="rounded-lg border border-gray-300 mb-6 w-full md:w-2/3" />
           </div>
 
           <div className="mb-8">
@@ -56,7 +56,7 @@ const App: React.FC = () => {
             <p className="text-gray-700 mb-2">
               Visit <a href="https://calendar.google.com/calendar/u/4/r/settings/export" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Google Calendar Import Settings</a> and import the downloaded ICS file:
             </p>
-            <img src="/import-google-event-1.png" alt="Google Calendar import instructions" className="rounded-lg border border-gray-300 mb-6 w-2/3" />
+            <img src="/import-google-event-1.png" alt="Google Calendar import instructions" className="rounded-lg border border-gray-300 mb-6 w-full md:w-2/3" />
           </div>
 
           <FAQ />
