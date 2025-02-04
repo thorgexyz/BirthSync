@@ -1,51 +1,39 @@
-# React + TypeScript + Vite
+# BirthSync 🎂
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple tool to convert Google Contacts birthdays into a calendar you can import anywhere. Due to recent regulatory changes, Google Calendar no longer displays contact birthdays in some regions. BirthSync helps you keep tracking birthdays by converting them to regular calendar events.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔒 100% secure: All processing happens in your browser
+- 🚀 Fast and simple to use
+- 📅 Generates standard ICS calendar files
+- 💾 No data storage or tracking
 
-## Expanding the ESLint configuration
+## How to Use
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Export your contacts from Google Contacts
+2. Upload the CSV file to BirthSync
+3. Download your birthday calendar
+4. Import into your preferred calendar app
 
-- Configure the top-level `parserOptions` property like this:
+## About
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Created by [Thorge](https://thorge.xyz) to solve the Google Calendar birthday sync issue.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## License
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+BirthSync is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). This means:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# BirthSync
+- You can use, modify, and distribute the software freely
+- If you modify and share the software, you must:
+  - Make your modifications available under the same license
+  - Share the source code
+  - State your changes
+
+For the full license text, see [LICENSE](LICENSE).
+
+## Links
+
+- [Live App](https://birth-sync.vercel.app/)
+- [GitHub Repository](https://github.com/thorgexyz/BirthSync)
+- [Report an Issue](https://github.com/thorgexyz/BirthSync/issues)
